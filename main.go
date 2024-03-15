@@ -45,9 +45,16 @@ func main() {
 	})
 
 	router.GET("/api/v1/avatar", avatarControllers.GetAllAvatars)
+	router.GET("/api/v1/avatar/:id", avatarControllers.GetDetailAvatar)
+
 	router.GET("/api/v1/quiz", quizControllers.GetAllquizes)
+	router.GET("/api/v1/quiz/:id", quizControllers.GetDetailQuiz)
+
 	router.GET("/api/v1/users", userControllers.GetAllUsers)
+	router.GET("/api/v1/users/:id", userControllers.GetDetailUser)
+
 	router.GET("/api/v1/diamond", diamondControllers.GetAllDiamonds)
+	router.GET("/api/v1/diamond/:id", diamondControllers.GetDetailDiamond)
 
 	router.Run()
 

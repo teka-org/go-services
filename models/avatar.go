@@ -1,8 +1,10 @@
 package models
 
+import "go.mongodb.org/mongo-driver/bson/primitive"
+
 type Avatar struct {
-	ID          int64  `gorm:"primaryKey" json:"id"`
-	Image       string `gorm:"type:varchar(300)" json:"image"`
-	Avatar_name string `gorm:"type:varchar(300)" json:"avatar_name"`
-	Price       string `gorm:"type:varchar(300)" json:"price"`
+	ID          primitive.ObjectID `bson:"_id" json:"id"`
+	Image       string             `bson:"image" json:"image"`
+	Avatar_name string             `bson:"avatar_name" json:"avatar_name"`
+	Price       string             `bson:"price" json:"price"`
 }

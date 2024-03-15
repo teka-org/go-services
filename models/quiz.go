@@ -1,7 +1,9 @@
 package models
 
+import "go.mongodb.org/mongo-driver/bson/primitive"
+
 type Quiz struct {
-	ID       int64  `gorm:"primaryKey" json:"id"`
-	Question string `gorm:"type:varchar(300)" json:"question"`
-	Answer   string `gorm:"type:varchar(300)" json:"answer"`
+	ID       primitive.ObjectID `bson:"_id" json:"id"`
+	Question string             `bson:"question" json:"question"`
+	Answer   string             `bson:"answer" json:"answer"`
 }

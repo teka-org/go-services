@@ -29,7 +29,6 @@ func GetAllUsers(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
-
 	c.JSON(http.StatusOK, users)
 }
 
@@ -58,5 +57,4 @@ func GetDetailUser(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, result)
-
 }

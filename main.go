@@ -31,7 +31,7 @@ func main() {
 
 	avatarCollection := client.Database("teka_apps").Collection("avatar")
 	quizcCollection := client.Database("teka_apps").Collection("quiz")
-	userCollection := client.Database("teka_apps").Collection("user")
+	userCollection := client.Database("teka_apps").Collection("users")
 	diamondCollection := client.Database("teka_apps").Collection("diamond")
 
 	router := gin.Default()
